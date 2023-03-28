@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;600;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(../imgs/Frame\ 1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+}
+.links-container {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+/* Start body */
+
+.main-section {
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main img {
+  width: 200px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main h4 {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5em;
+  color: #000;
+  opacity: 0.6;
+}
+
+.fa-graduation-cap {
+  margin-left: 5px;
+}
+
+.fa-bolt {
+  margin-left: 5px;
+}
+
+.fa-house {
+  margin-left: 5px;
+}
+
+.fa-circle-chevron-down {
+  margin-left: 5px;
+  color: #000;
+}
+
+.fa-magnifying-glass {
+  margin-right: 5px;
+}
+
+.fa-computer-mouse {
+  margin-left: 5px;
+}
+
+.fa-circle-question {
+  margin-left: 5px;
+}
+
+.fa-arrow-up-right-from-square {
+  margin-left: 5px;
+}
+
+.fa-arrow-pointer {
+  margin-right: 15px;
+}
+
+.fa-magnifying-glass {
+  margin-right: 10px;
+}
+
+.span {
+  width: 20px;
+  height: 20px;
+  background-color: #270a53;
+  border: #000 1px solid;
+  margin-right: 10px;
+}
+
+.site-wrap {
+  max-width: 100%;
+  margin: 70px auto;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(0.98);
+  transition: transform 0.5s;
+}
+
+.fixed-nav .site-wrap {
+  transform: scale(1);
+}
+
+nav {
+  top: 0;
+  width: 100%;
+  transition: all 0.9s, background 1ms;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffdfd;
+}
+
+.fixed-nav nav {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  top: 0;
+  height: 90px;
+}
+
+nav ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 50px;
+}
+
+nav ul li.link {
+  display: flex;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 0 5px;
+  transition: 0.5s ease;
+  margin: 5px;
+}
+nav ul li.link:nth-child(6) {
+  display: none;
+}
+
+nav ul li a:hover {
+  color: #5941a4;
+}
+nav ul li:nth-child(11) a {
+  background-color: #5941a4;
+  color: #f9f9f9;
+  padding: 10px;
+  font-size: 18px;
+}
+nav ul li:nth-child(11) a:hover {
+  background-color: #270a53;
+}
+
+nav ul li.Logo {
+  box-shadow: none;
+  display: none;
+}
+
+nav ul li.Logo:hover {
+  background: none;
+  box-shadow: none;
+}
+
+li.Logo {
+  max-width: 0;
+  overflow: hidden;
+  background: transparent;
+  transition: all 0.5s;
+  height: 70px;
+  width: 70px;
+  /* padding: 2px; */
+  margin-top: 35px;
+}
+
+.fixed-nav li.Logo {
+  max-width: 500px;
+}
+
+li.logo a {
+  color: black;
+}
+
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  transition: all 0.2s;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+ul .home {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+ul .home:hover {
+  background: transparent;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown a {
+  font-size: 16px;
+}
+
+.dropbtn {
+  /* margin-top: 10px; */
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #5941a4;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ffc94b;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+ul.dropdown {
+  background-color: transparent;
+}
+
+/* End body */
+h2 {
+  font-size: 40px;
+  margin-top: 60px;
+  opacity: 0.7;
+}
+
+.line {
+  width: 100%;
+  background-color: #705cab;
+  border: 5px solid #705cab;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.cards {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../imgs/Frame\ 1.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  width: 100%;
+  height: 63vh;
+}
+.card {
+  background-color: #fafafa;
+  width: 21.25em;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 50%);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  transition: 0.7s ease;
+  margin-bottom: 60px;
+}
+.card:hover {
+  transform: scale(1.05, 1.05);
+}
+.icon {
+  color: #5941a4;
+  font-size: 5em;
+  text-align: center;
+}
+.info h3 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.info p {
+  text-align: center;
+  color: #705cab;
+  font-size: 20px;
+}
+
+/*  Start section of studying in Turkey*/
+
+/*  End section of studying in Turkey*/
+@media (min-width: 958px) and (max-width: 2000px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 945px) {
+  body {
+    width: 100%;
+    /* height: 500vh; */
+    background-image: url(../imgs/Frame\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main img {
+    width: 200px;
+    display: none;
+  }
+
+  .fixed-nav nav {
+    display: none;
+  }
+
+  /* Start header */
+  html,
+  body {
+    scroll-behavior: smooth;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
+  /* Start Cards */
+  .cards {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: transparent;
+    width: 100%;
+    height: 150vh;
+    margin-bottom: 0;
+  }
+  .card {
+    background-color: #fafafa;
+    width: 21em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 50%);
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.7s ease;
+    margin-bottom: 15px;
+  }
+
+  .icon {
+    color: #5941a4;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .info h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .info p {
+    text-align: center;
+    color: #705cab;
+    font-size: 16px;
+  }
+  /* End Card */
+
+  /* End Resposive header */
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 2;
+  }
+
+  nav {
+    background-color: white;
+    margin-bottom: 40px;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .hamburger .linee {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+  .link {
+    display: none;
+  }
+
+  .active-nav {
+    margin-bottom: 50px;
+    background-color: white;
+    color: #eeeeee;
+    height: 400px;
+  }
+
+  .active-nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .active-nav .link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* display: none; */
+  }
+
+  .active-nav ul .Logo {
+    width: 100%;
+    max-width: none;
+  }
+  nav ul li:nth-child(11) {
+    display: none;
+  }
+
+  nav ul li:nth-child(10) {
+    display: none;
+  }
+
+  nav ul li:nth-child(9) {
+    display: none;
+  }
+
+  nav ul li:nth-child(8) {
+    display: none;
+  }
+
+  nav ul li:nth-child(7) {
+    display: none;
+  }
+
+  nav ul li:nth-child(6) {
+    display: none;
+  }
+
+  nav ul li:nth-child(5) {
+    display: none;
+  }
+
+  nav ul li:nth-child(4) {
+    display: none;
+  }
+
+  nav ul li:nth-child(3) {
+    display: none;
+  }
+  nav ul li:nth-child(1) {
+    display: none;
+  }
+
+  .active-nav ul li:nth-child(3) {
+    display: block;
+  }
+
+  .active-nav ul li:nth-child(8) {
+    display: block;
+  }
+
+  .dropbtn {
+    color: black;
+    font-size: 10px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .main h4 {
+    display: none;
+  }
+}
