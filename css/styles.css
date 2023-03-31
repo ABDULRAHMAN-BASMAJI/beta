@@ -8,6 +8,15 @@
   font-family: "Tajawal", sans-serif;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -25,18 +34,13 @@ body {
 }
 .links-container {
   width: 100%;
-  /* border: 1px solid red; */
+
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+ 
 }
 /* Start body */
-
-.main-section {
-  width: 100%;
-  /* height: 100vh; */
-}
 
 .main {
   display: flex;
@@ -62,6 +66,37 @@ body {
   font-size: 2.5em;
   color: #000;
   opacity: 0.6;
+}
+.body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body-container {
+  width: 100%;
+  height: 664px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.content {
+  margin-top: 5rem;
+}
+.content img {
+  width: 200px;
+}
+.content h4 {
+  font-size: 40px;
+  color: #444;
+}
+
+.links-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
 .fa-graduation-cap {
@@ -128,13 +163,16 @@ body {
 
 nav {
   top: 0;
-  width: 100%;
+  width: 100vw;
   transition: all 0.9s, background 1ms;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fffdfd;
+  border-top: 1px solid #ffc94b;
+  border-bottom: 1px solid #ffc94b;
+  box-shadow: 0 0 5px #f9e1aa;
 }
 
 .fixed-nav nav {
@@ -297,152 +335,127 @@ h2 {
   opacity: 0.7;
 }
 
-.line {
-  width: 100%;
-  background-color: #705cab;
-  border: 5px solid #705cab;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
+/* Start cards */
 .cards {
-  width: 100%;
-  height: 100vh;
-  background-image: url(../imgs/Frame\ 1.jpg);
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background-color: transparent;
-  width: 100%;
-  height: 63vh;
-}
-.card {
-  background-color: #fafafa;
-  width: 21.25em;
-  box-shadow: 0 5px 25px rgba(1 1 1 / 50%);
-  border-radius: 10px;
-  padding: 25px;
-  margin: 15px;
-  transition: 0.7s ease;
-  margin-bottom: 60px;
-}
-.card:hover {
-  transform: scale(1.05, 1.05);
-}
-.icon {
-  color: #5941a4;
-  font-size: 5em;
-  text-align: center;
-}
-.info h3 {
-  text-align: center;
-  font-size: 25px;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  font-family: sans-serif;
 }
 
-.info p {
+.cards * {
+  box-sizing: border-box;
+}
+
+
+.icon{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: #5941a4;
+  
+}
+
+.card__content {
+  line-height: 1.5;
+  font-size: 0.9em;
+  padding: 15px;
+  background: #fafafa;
+  box-shadow: 0 0 10px #eee1c1;
+  transition: .3s;
+  border-radius: 10px;
+}
+
+.card__content:hover {
+  transform: scale(1.04, 1.04);
+}
+
+.card__content > p:first-of-type {
+  margin-top: 0;
   text-align: center;
-  color: #705cab;
   font-size: 20px;
 }
+.card__content h3 {
+  text-align: center;
+  font-size: 20px;
+}
+.card__content > p:last-of-type {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.card__info {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555555;
+  background: #eeeeee;
+  font-size: 0.8em;
+  border-bottom: 2px solid #333333;
+  border-right: 2px solid #333333;
+  border-left: 2px solid #333333;
+}
+
+.card__info i {
+  font-size: 0.9em;
+  margin-right: 8px;
+}
+
+.card__link {
+  color: #64968c;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+/* End cards */
 
 /*  Start section of studying in Turkey*/
 
 /*  End section of studying in Turkey*/
-@media (min-width: 958px) and (max-width: 2000px) {
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-  }
-}
 
 @media only screen and (max-width: 945px) {
   body {
     width: 100%;
-    /* height: 500vh; */
     background-image: url(../imgs/Frame\ 1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-  .main img {
-    width: 200px;
-    display: none;
-  }
 
   .fixed-nav nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 90px;
     display: none;
   }
-
   /* Start header */
-  html,
-  body {
-    scroll-behavior: smooth;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-  }
 
   /* Start Cards */
   .cards {
-    width: 100%;
-    height: 150vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-auto-rows: auto;
+    gap: 20px;
+    font-family: sans-serif;
+    padding-top: 30px;
   }
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: transparent;
-    width: 100%;
-    height: 150vh;
-    margin-bottom: 0;
-  }
-  .card {
-    background-color: #fafafa;
-    width: 21em;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 50%);
-    border-radius: 10px;
-    padding: 15px;
-    transition: 0.7s ease;
-    margin-bottom: 15px;
-  }
-
-  .icon {
-    color: #5941a4;
-    font-size: 3em;
-    text-align: center;
-  }
-
-  .info h3 {
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .info p {
-    text-align: center;
-    color: #705cab;
-    font-size: 16px;
+  .card__content {
+    padding: 10px;
   }
   /* End Card */
 
@@ -496,7 +509,6 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* display: none; */
   }
 
   .active-nav ul .Logo {
@@ -560,8 +572,33 @@ h2 {
   }
 }
 
-@media only screen and (max-width: 545px) {
-  .main h4 {
-    display: none;
+@media only screen and (max-width: 601px) {
+  .content img {
+    width: 200px;
+  }
+  .content h4 {
+    font-size: 30px;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 384px) {
+  .content h4 {
+    font-size: 25px;
+  }
+}
+
+
+@media only screen and (max-width: 556px)  {
+  .cards {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    width: 300px;
+    gap: 20px;
+    font-family: sans-serif;
+    padding-top: 30px;
   }
 }
